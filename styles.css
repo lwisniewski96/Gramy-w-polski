@@ -16,7 +16,6 @@ header {
   align-items: center;
   padding: 10px;
   background-color: #f1f1f1;
- 
 }
 
 .logo {
@@ -48,9 +47,11 @@ nav ul li a {
 
 /* Sekcja 1 */
 .background-container {
-  background-image: url("./img/background\ image.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("./img/background\ image.jpg"),
+    url("./img/adrian\ avatar.png"), url("./img/karola\ avatar.png");
+  background-size: cover, auto, auto;
+  background-position: center, top left, top right;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,4 +59,11 @@ nav ul li a {
   text-align: center;
   padding: 50px;
   color: #fff; /* Kolor tekstu */
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Styl cienia */
+}
+
+.avatar1 {
+  background-image: url("./img/adrian\ avatar.png");
+  background-size: cover;
 }
