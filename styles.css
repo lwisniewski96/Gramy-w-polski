@@ -44,26 +44,46 @@ nav ul li a {
   text-decoration: none;
   color: #333;
 }
-
-/* Sekcja 1 */
-.background-container {
-  background-image: url("./img/background\ image.jpg"),
-    url("./img/adrian\ avatar.png"), url("./img/karola\ avatar.png");
-  background-size: cover, auto, auto;
-  background-position: center, top left, top right;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px;
-  color: #fff; /* Kolor tekstu */
+.laptop-image {
+  width: 100%;
   height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Styl cienia */
+  object-fit: cover;
+}
+/* Sekcja 1 */
+.laptop-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.avatar1 {
-  background-image: url("./img/adrian\ avatar.png");
+.laptop-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(./img/Ojciec.png);
   background-size: cover;
+  transform-origin: top right;
+  transform: skewX(-15deg);
+  z-index: -2;
+}
+
+.laptop-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(./img/Karolina.png);
+  background-size: cover;
+  transform-origin: top left;
+  transform: skewX(15deg);
+  z-index: -2;
 }
