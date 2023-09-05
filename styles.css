@@ -9,6 +9,10 @@ body {
 
 main {
   min-height: 100%;
+  background-image: url("./img/backround.jpeg"); /* Ścieżka do zdjęcia w tle */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 header {
   display: flex;
@@ -49,7 +53,7 @@ nav ul li a {
   height: 100%;
   object-fit: cover;
 }
-/* Sekcja 1 */
+/* Sekcja 1
 .laptop-container {
   position: fixed;
   top: 0;
@@ -86,4 +90,37 @@ nav ul li a {
   transform-origin: top left;
   transform: skewX(15deg);
   z-index: -2;
+} */
+
+/* ROBIMY NANIESIENIE NA KAROLINE I ADRIANA */
+.side-images {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie wzdłuż osi poziomej */
+  align-items: center; /* Wyśrodkowanie wzdłuż osi pionowej */
+  flex-wrap: wrap; /* Pozwala na zawijanie do nowej linii, jeśli brakuje miejsca */
+  margin: -80px auto 20px; /* Dostosuj margines górny i dolny */
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.side-image {
+  flex-basis: 40%; /* Dostosowana szerokość obrazka */
+  max-height: 400px;
+  margin: 20px; /* Odstęp między obrazkami */
+  box-sizing: border-box; /* Zapobiega dodatkowemu zwiększaniu rozmiaru z marginesami i paddingiem */
+}
+
+.left-image {
+  width: 150%; /* Dostosuj szerokość obrazka lewego */
+  max-height: 400px; /* Ustaw maksymalną wysokość obrazka lewego */
+}
+
+.right-image {
+  width: 85%; /* Dostosuj szerokość obrazka prawego */
+  max-height: 400px; /* Ustaw maksymalną wysokość obrazka prawego */
+}
+
+.btn1 {
+  background-color: blue;
+  border-radius: 5%;
 }
